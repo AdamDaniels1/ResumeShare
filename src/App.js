@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ImageViewer from "./components/ImageViewer";
+import Layout from "./components/Layout";
+
+//Note- may need to rewatch taht Dev guy on YT, his video on using Router. I want to have my NavBar as its own separate component
+//Continued - and I want to have each nav element(about/browse/fileupload/home) as their own Link (instead of a href) using Router
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-slate-200 min-h-screen">
+      <Layout />
+      <div className="my-4">
+        <ImageViewer />
+      </div>
     </div>
   );
 }
